@@ -2,8 +2,6 @@
 
 LegalLM is an advanced, AI-driven application designed to streamline the process of legal document analysis. It provides a secure, intuitive workspace where legal professionals can upload documents, receive intelligent summaries, identify risks, and ask complex questions in natural language.
 
-![LegalLM Screenshot](https://storage.googleapis.com/studioprototype.appspot.com/legallm-screenshot.png)
-
 ## Features
 
 - **Multi-Format Document Upload**: Seamlessly upload and process documents in various formats, including `.txt`, `.pdf`, and `.docx`.
@@ -24,7 +22,10 @@ LegalLM is built with a modern, type-safe, and performant technology stack:
 - **UI Components**: [React](https://react.dev/), [ShadCN UI](https://ui.shadcn.com/)
 - **Styling**: [Tailwind CSS](https://tailwindcss.com/)
 - **File Parsing**: [pdf2json](https://www.npmjs.com/package/pdf2json), [Mammoth](https://www.npmjs.com/package/mammoth) for `.docx` files.
-- **Deployment**: Ready for [Firebase App Hosting](https://firebase.google.com/docs/app-hosting).
+- **Deployment**: Deployed on [Netlify](https://www.netlify.com/) (https://legallm.netlify.app).
+
+## Live Demo
+This application is deployed and accessible at Netlify.
 
 ## Getting Started
 
@@ -71,7 +72,36 @@ Follow these instructions to get a local copy of LegalLM up and running.
 
 You should now have a fully functional local instance of LegalLM running!
 
-## Deploying to Vercel (recommended)
+## Deployment
+
+This application is deployed on Netlify.
+
+### Deploying to Netlify
+
+Netlify provides excellent support for Next.js applications with automatic deployments from Git.
+
+1. **Connect your repository:**
+   - Log in to [Netlify](https://app.netlify.com/)
+   - Click "Add new site" → "Import an existing project"
+   - Connect your Git repository (GitHub, GitLab, or Bitbucket)
+
+2. **Configure build settings:**
+   - Build command: `npm run build`
+   - Publish directory: `.next`
+   - Node version: 18 or later
+
+3. **Set environment variables:**
+   - In Netlify project settings → Environment variables
+   - Add `GEMINI_API_KEY` with your Google AI API key from [Google AI Studio](https://aistudio.google.com/app/apikey)
+
+4. **Deploy:**
+   - Click "Deploy site"
+   - Netlify will automatically build and deploy your application
+   - Future commits to your main branch will trigger automatic deployments
+
+**Note:** If your app depends on a running Genkit server for AI flows, you may need to host that service separately (Cloud Run, Railway, or another server) and configure the appropriate endpoints. Always use environment variables for API keys and never commit secrets to your repository.
+
+### Alternative: Deploying to Vercel
 
 Vercel provides first-class support for Next.js, automatic builds from GitHub, and an easy environment variable UI.
 
