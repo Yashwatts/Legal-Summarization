@@ -22,10 +22,11 @@ LegalLM is built with a modern, type-safe, and performant technology stack:
 - **UI Components**: [React](https://react.dev/), [ShadCN UI](https://ui.shadcn.com/)
 - **Styling**: [Tailwind CSS](https://tailwindcss.com/)
 - **File Parsing**: [pdf2json](https://www.npmjs.com/package/pdf2json), [Mammoth](https://www.npmjs.com/package/mammoth) for `.docx` files.
-- **Deployment**: Deployed on [Netlify](https://www.netlify.com/) (https://legallm.netlify.app).
+- **Deployment**: Deployed on [Netlify](https://www.netlify.com/).
 
 ## Live Demo
 This application is deployed and accessible at Netlify.
+https://legallm.netlify.app
 
 ## Getting Started
 
